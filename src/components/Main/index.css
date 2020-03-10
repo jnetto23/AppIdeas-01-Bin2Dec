@@ -1,0 +1,16 @@
+main {
+  max-width: 500px !important;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media only screen and (min-width: 768px) {
+  main {
+    flex-direction: row !important;
+    flex: none !important;
+    margin-top: 100px !important;
+  }
+  button {
+    margin-bottom: 0;
+  }
+}
