@@ -11,6 +11,9 @@ export default function Main() {
   const [binario, setBinario] = React.useState('');
   const [decimal, setDecimal] = React.useState('');
 
+  const refBin = React.createRef();
+  const refDec = React.createRef();
+
   function bin2Dec(value) {
     const v = value
       .split('')
@@ -85,12 +88,28 @@ export default function Main() {
     setBinario(bin || '');
   }
 
+  function autoresize(el) {
+    const e = el;
+    setTimeout(() => {
+      e.style.cssText = `height:auto`;
+      e.style.cssText = `height:${e.scrollHeight}px`;
+    }, 0);
+  }
+
   function handleConvert(e) {
     if (e.target.id === 'Binario') {
       bin2Dec(e.target.value);
+      autoresize(refDec.current);
     } else {
       dec2Bin(e.target.value);
+      autoresize(refBin.current);
     }
+  }
+
+  function handleOpt() {
+    setOpt(!opt);
+    autoresize(refBin.current);
+    autoresize(refDec.current);
   }
 
   return (
@@ -99,18 +118,20 @@ export default function Main() {
         <label htmlFor={opt ? 'Binario' : 'Decimal'}>
           {opt ? 'Binario' : 'Decimal'}
         </label>
-        <input
+        <textarea
           type="text"
+          rows="1"
           name={opt ? 'Binario' : 'Decimal'}
           id={opt ? 'Binario' : 'Decimal'}
           placeholder="Input"
-          maxLength={opt ? '8' : ''}
-          value={opt ? binario : decimal}
+          ref={opt ? refBin : refDec}
+          value={opt ? binario : decimal.toLocaleString()}
           onChange={e => handleConvert(e)}
+          onKeyDown={e => autoresize(e.target)}
         />
       </div>
 
-      <button type="button" title="Alterar" onClick={() => setOpt(!opt)}>
+      <button type="button" title="Alterar" onClick={() => handleOpt()}>
         <IoIosSwap size="30px" color="#fff" />
       </button>
 
@@ -118,13 +139,16 @@ export default function Main() {
         <label htmlFor={!opt ? 'Binario' : 'Decimal'}>
           {!opt ? 'Binario' : 'Decimal'}
         </label>
-        <input
+        <textarea
           type="text"
+          rows="1"
           name={!opt ? 'Binario' : 'Decimal'}
           id={!opt ? 'Binario' : 'Decimal'}
           placeholder="Output"
-          value={!opt ? binario : decimal}
+          ref={!opt ? refBin : refDec}
+          value={!opt ? binario : decimal.toLocaleString()}
           onChange={e => handleConvert(e)}
+          onKeyDown={e => autoresize(e.target)}
         />
       </div>
     </main>
