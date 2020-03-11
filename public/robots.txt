@@ -1,0 +1,3 @@
+user-agent: *
+Disallow: /
+Sitemap: https://bin-2-dec.netlify.com/sitemap.xml
