@@ -1,4 +1,4 @@
-# AppIdeas-01-Bin2Dec
+# Bin2Dec
 
 Bin2Dec is a simple converter of binary numbers to decimal numbers and vice versa
 Idea from [here](https://github.com/florinpop17/app-ideas/blob/master/Projects/1-Beginner/Bin2Dec-App.md)
