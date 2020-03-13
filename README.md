@@ -1,7 +1,8 @@
 # Bin2Dec
 
-Bin2Dec is a simple converter of binary numbers to decimal numbers and vice versa
-Idea from [here](https://github.com/florinpop17/app-ideas/blob/master/Projects/1-Beginner/Bin2Dec-App.md)
+Bin2Dec is a simple converter of binary numbers to decimal numbers and vice versa  
+Idea from [here](https://github.com/florinpop17/app-ideas/blob/master/Projects/1-Beginner/Bin2Dec-App.md)  
+[Final Project](https://bin-2-dec.netlify.com/)
 
 **Tier:** 1-Beginner
 
@@ -16,15 +17,15 @@ This challenge requires that the developer implementing it follow these constrai
 
 ## User Stories
 
-- [x] ~~User can enter up to 8 binary digits in one input field~~
-- [x] ~~User must be notified if anything other than a 0 or 1 was entered~~
-- [x] ~~User views the results in a single output field containing the decimal (base 10) equivalent of the binary number that was entered~~
+- [x] User can enter up to 8 binary digits in one input field
+- [x] User must be notified if anything other than a 0 or 1 was entered~~
+- [x] User views the results in a single output field containing the decimal (base 10) equivalent of the binary number that was entered
 
 ## Bonus features
 
-- [x] ~~User can enter a variable number of binary digits~~
+- [x] User can enter a variable number of binary digits
 
 ## New features
 
-- [x] ~~Implement converting from decimal to binary~~
-- [x] ~~User must be notified if something other than integers (0-9) has been entered in the decimal field~~
+- [x] Implement converting from decimal to binary
+- [x] User must be notified if something other than integers (0-9) has been entered in the decimal field
