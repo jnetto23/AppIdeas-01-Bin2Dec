@@ -1,7 +1,8 @@
 main {
   max-width: 500px !important;
   flex-direction: column;
-  justify-content: center;
+  margin-top: 50px !important;
+  /* justify-content: center; */
 }
 
 textarea {
@@ -12,6 +13,7 @@ textarea {
 @media only screen and (min-width: 768px) {
   main {
     flex-direction: row !important;
+    justify-content: center;
     flex: none !important;
     margin-top: 100px !important;
   }

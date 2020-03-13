@@ -101,7 +101,7 @@ export default function Main() {
       bin2Dec(e.target.value);
       autoresize(refDec.current);
     } else {
-      dec2Bin(e.target.value);
+      dec2Bin(e.target.value.replace(/\D+/g, ''));
       autoresize(refBin.current);
     }
   }
